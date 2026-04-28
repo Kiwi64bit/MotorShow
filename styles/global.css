@@ -1,0 +1,494 @@
+/* External fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue');
+
+/* Global Reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global variables */
+:root,
+[data-theme=light] {
+    /* Base surfaces */
+    --base-color: hsl(0, 0%, 100%);
+    --surface-1: hsl(0, 0%, 98%);
+    --surface-2: hsl(220, 20%, 96%);
+
+    /* Brand */
+    --primary-color: hsl(230, 87%, 60%);
+    --secondary-color: hsl(262, 70%, 55%);
+    --tertiary-color: hsl(190, 80%, 45%);
+    --accent-color: hsl(45, 100%, 55%);
+
+    /* Text */
+    --text-light: hsl(0, 0%, 95%);
+    --text-dark: hsl(222, 15%, 10%);
+    --text-color: hsl(222, 15%, 10%);
+    --text-muted: hsl(222, 10%, 40%);
+
+    /* UI states */
+    --success-color: hsl(145, 60%, 42%);
+    --warning-color: hsl(38, 95%, 55%);
+    --danger-color: hsl(0, 80%, 55%);
+    --info-color: hsl(200, 90%, 55%);
+
+    /* Borders / dividers */
+    --border-color: hsl(220, 15%, 88%);
+
+    /* Font face */
+    --ff1: "DM Sans", Arial, Helvetica, sans-serif;
+    --ff2: "Montserrat", Arial, Helvetica, sans-serif;
+
+    /* Spacing */
+    --spacing1: 0.25rem;
+    --spacing2: 0.5rem;
+    --spacing3: 0.75rem;
+    --spacing4: 1rem;
+    --spacing5: 1.25rem;
+    --spacing6: 1.5rem;
+    --spacing7: 2rem;
+    --spacing8: 3rem;
+    --spacing9: 5rem;
+
+    /* Font size */
+    --fs1: calc(1.375rem + 1.5vw);
+    --fs2: calc(1.325rem + 0.9vw);
+    --fs3: calc(1.3rem + 0.6vw);
+    --fs4: calc(1.275rem + 0.3vw);
+    --fs5: 1.25rem;
+    --fs6: 1rem;
+}
+
+[data-theme=dark] {
+    color-scheme: dark;
+
+    /* Base surfaces */
+    --base-color: hsl(222, 18%, 10%);
+    --surface-1: hsl(222, 18%, 14%);
+    --surface-2: hsl(222, 18%, 18%);
+
+    /* Brand (slightly brighter for dark mode)
+    --primary-color: hsl(230, 90%, 65%);
+    --secondary-color: hsl(262, 80%, 65%);
+    --tertiary-color: hsl(190, 85%, 55%);
+    --accent-color: hsl(45, 100%, 60%); */
+
+    /* Text */
+    --text-color: hsl(0, 0%, 95%);
+    --text-muted: hsl(0, 0%, 70%);
+
+    /* UI states (brightened for visibility on dark bg)
+    --success-color: hsl(145, 65%, 55%);
+    --warning-color: hsl(38, 95%, 60%);
+    --danger-color: hsl(0, 85%, 65%);
+    --info-color: hsl(200, 90%, 65%); */
+
+    /* Borders / dividers */
+    --border-color: hsl(222, 15%, 28%);
+}
+
+
+/* Override default styles */
+html,
+body {
+    font-family: var(--ff2);
+    background-color: var(--base-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: var(--ff1);
+    margin-top: 0;
+    margin-bottom: var(--spacing2);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--text-color);
+}
+
+h1,
+.h1 {
+    font-size: var(--fs1);
+}
+
+h2,
+.h2 {
+    font-size: var(--fs2);
+}
+
+h3,
+.h3 {
+    font-size: var(--fs3);
+}
+
+h4,
+.h4 {
+    font-size: var(--fs4);
+}
+
+h5,
+.h5 {
+    font-size: var(--fs5);
+}
+
+h6,
+.h6 {
+    font-size: var(--fs6);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* Utilities */
+
+/* buttons */
+.button {
+    --btn-text: var(--text-color);
+    --btn-color: transparent;
+    --btn-border-color: transparent;
+    --btn-border-width: 1px;
+    --btn-border-radius: 0.25rem;
+    display: inline-block;
+    padding: var(--spacing2) var(--spacing4);
+    font-size: var(--fs6);
+    color: var(--btn-text);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: var(--btn-border-width) solid var(--btn-border-color);
+    border-radius: var(--btn-border-radius);
+    background-color: var(--btn-color);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.button:hover {
+    background-color: color-mix(in srgb, var(--btn-color), black 10%);
+    border-color: color-mix(in srgb, var(--btn-color), black 15%);
+}
+
+.button:active {
+    background-color: color-mix(in srgb, var(--btn-color), black 20%);
+    border-color: color-mix(in srgb, var(--btn-color), black 25%);
+}
+
+.button:focus-visible {
+    box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--btn-color), transparent 70%);
+}
+
+.button.primary {
+    --btn-text: var(--text-light);
+    --btn-color: var(--primary-color);
+}
+
+.button.secondary {
+    --btn-text: var(--text-light);
+    --btn-color: var(--secondary-color);
+}
+
+.button.accent {
+    --btn-text: var(--text-dark);
+    --btn-color: var(--accent-color);
+}
+
+.button.success {
+    --btn-text: var(--text-dark);
+    --btn-color: var(--success-color);
+}
+
+.button.warning {
+    --btn-text: var(--text-dark);
+    --btn-color: var(--warning-color);
+}
+
+.button.danger {
+    --btn-text: var(--text-light);
+    --btn-color: var(--danger-color);
+}
+
+/* containers */
+.container {
+    width: 100%;
+    padding: 0 var(--spacing3);
+    margin: auto;
+}
+
+.container-sm {
+    max-width: 540px;
+    margin: auto;
+    padding: 0 var(--spacing3);
+}
+
+.container-md {
+    max-width: 720px;
+    margin: auto;
+    padding: 0 var(--spacing3);
+}
+
+.container-lg {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 var(--spacing3);
+}
+
+.container-xl {
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 var(--spacing3);
+}
+
+/* form control */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing2);
+    margin-bottom: var(--spacing5);
+}
+
+.form-label {
+    font-family: var(--ff1);
+    font-size: var(--fs6);
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: var(--spacing3) var(--spacing4);
+    font-size: var(--fs6);
+    font-family: var(--ff2);
+    color: var(--text-color);
+    background-color: var(--surface-1, var(--base-color));
+    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.15));
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+/* PLACEHOLDER */
+.form-control::placeholder {
+    color: color-mix(in srgb, var(--text-color), transparent 60%);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--primary-color), transparent 75%);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* validate state */
+.form-control.is-success {
+    border-color: var(--success-color);
+}
+
+.form-control.is-success:focus {
+    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--success-color), transparent 75%);
+}
+
+.form-control.is-error {
+    border-color: var(--danger-color);
+}
+
+.form-control.is-error:focus {
+    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--danger-color), transparent 75%);
+}
+
+.form-control.is-warning {
+    border-color: var(--warning-color);
+}
+
+.form-control.is-warning:focus {
+    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--warning-color), transparent 75%);
+}
+
+/* feedback */
+.form-feedback {
+    font-size: 0.85rem;
+    margin-top: -0.25rem;
+}
+
+.form-feedback.success {
+    color: var(--success-color);
+}
+
+.form-feedback.error {
+    color: var(--danger-color);
+}
+
+.form-feedback.warning {
+    color: var(--warning-color);
+}
+
+/* navbar */
+.navbar {
+    --brand-font: "Bebas Neue", "Arial Narrow", Arial, Helvetica, sans-serif;
+    --brand-color: var(--primary-color);
+    display: flex;
+    gap: var(--spacing4);
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--navbar-text-color);
+    padding: var(--spacing4) 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--primary-color), transparent 85%);
+}
+
+.navbar>.container {
+    display: flex;
+    gap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .navbar-brand {
+    font-family: var(--brand-font);
+    font-size: var(--fs2);
+    font-weight: normal;
+    color: var(--brand-color);
+    text-decoration: none;
+    padding: var(--spacing1) 0;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.navbar .nav {
+    display: flex;
+    gap: var(--spacing4);
+    list-style: none;
+    align-items: center;
+}
+
+.navbar .nav .nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.15s ease;
+
+}
+
+.navbar .nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+.theme-toggler {
+    --bg-light: hsl(230, 25%, 85%);
+    --bg-dark: hsl(230, 87%, 75%);
+    --toggler-thumb: #fff;
+    --width: 3.5rem;
+    --height: 2rem;
+    --margin: 0.25rem;
+    --thumb-width: calc(var(--height) - var(--margin) * 2);
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    background-color: var(--bg-light);
+    border: none;
+    border-radius: 50rem;
+}
+
+.theme-toggler::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: var(--thumb-width);
+    aspect-ratio: 1 / 1;
+    background-color: var(--toggler-thumb);
+    border-radius: 100%;
+    left: 0;
+    top: 50%;
+    translate: var(--margin) -50%;
+    transition: translate 0.25s ease,
+        background-color 0.25s ease;
+}
+
+[data-theme="dark"] .theme-toggler {
+    background-color: var(--bg-dark)
+}
+
+[data-theme="dark"] .theme-toggler::after {
+    translate: calc(var(--width) - var(--thumb-width) - var(--margin)) -50%;
+}
+
+/* footer */
+.footer {
+    color: var(--text-color);
+    padding: var(--spacing7) 0;
+    border-top: 1px solid color-mix(in srgb, var(--primary-color), transparent 85%);
+    font-family: var(--ff1);
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing6);
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    max-width: 20rem;
+}
+
+.footer-brand h3 {
+    font-family: "Bebas Neue", "Arial Narrow", Arial, sans-serif;
+    color: var(--primary-color);
+    font-size: var(--fs3);
+    margin-bottom: var(--spacing2);
+}
+
+.footer-brand p {
+    font-family: var(--ff2);
+    color: var(--text-muted);
+    font-size: var(--fs6);
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--spacing4);
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.15s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    margin-top: var(--spacing6);
+    text-align: center;
+    color: var(--text-muted);
+}
