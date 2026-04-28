@@ -204,6 +204,11 @@ p {
     --btn-color: var(--secondary-color);
 }
 
+.button.tertiary {
+    --btn-text: var(--text-dark);
+    --btn-color: var(--tertiary-color);
+}
+
 .button.accent {
     --btn-text: var(--text-dark);
     --btn-color: var(--accent-color);
