@@ -6,18 +6,62 @@
         <link  rel="stylesheet" href="../styles/global.css">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     </head>
+    <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a href="#" class="navbar-brand">MotorShow</a>
+
+                    <div class="navbar-nav">
+                        <ul class="nav">
+                            <a href="index.html" class="nav-link">Home</a>
+                            <a href="pages/listings.html" class="nav-link">Listings</a>
+                            <a href="pages/blog.html" class="nav-link">Blog</a>
+                            <a href="pages/about.html" class="nav-link">About</a>
+                            <a href="pages/contact.html" class="nav-link">Contact</a>
+                        </ul>
+                    </div>
+
+                    <button id="themeToggle" class="theme-toggler"></button>
+
+                    <button class="login button primary">Login</button>
+                </div>
+            </nav>
+        </header>
     <body>
        <div class="all" >
-       <form >
-        <div class="form-item"   >
-        <input type="text"  placeholder="first name" required>
-        <input type="text"  placeholder="last name" required>
-        <input type="email"  placeholder="email" required>
-        <input type="number"  placeholder="phone" required>
-        <textarea  placeholder="message"></textarea>
+       <form  class="form-item">
+        <div>
+
+         <div class="form-group"> 
+            <label class="form-label"> first name </label>
+            <input type="text"  class="form-control" placeholder="sara" required>
+        </div>
+
+        <div class="form-group">  
+             <label class="form-label"> last name </label>
+             <input type="text" class="form-control" placeholder="ali" required>
+        </div>
+
+        <div class="form-group">  
+             <label class="form-label"> email </label>
+             <input type="email" class="form-control" placeholder="ali@gmail.com" required>
+        </div>
+
+        <div class="form-group">  
+           <label class="form-label"> phone </label>
+           <input type="number" class="form-control" placeholder="145 6577" required>
+        </div>
+
+        <div class="form-group">
+              <label class="form-label"> message</label>
+              <textarea class="form-control"></textarea>
+        </div>
+
        </div>
-       <div> <button class=".button"> send</button></div>
-        </form>
+
+       <div class="butt"> <button class="button primary"> send</button></div>
+    </form>
+
         <form  class="info">
        <div class="div-info" >
             <h2>Contact information</h2>
@@ -32,5 +76,24 @@
         </div>
         </form>
     </div>
+      <footer class="footer">
+            <div class="container">
+                <div class="footer-brand">
+                    <h3>MotorShow</h3>
+                    <p>Discover quality cars, fair prices, and a smoother buying experience.</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Docs</a>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">© 2026 MotorShow. All rights reserved.</div>
+        </footer>
+
     </body>
 </html>
