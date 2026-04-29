@@ -72,21 +72,21 @@
     --surface-1: hsl(222, 18%, 14%);
     --surface-2: hsl(222, 18%, 18%);
 
-    /* Brand (slightly brighter for dark mode)
+    /* Brand (slightly brighter for dark mode) */
     --primary-color: hsl(230, 90%, 65%);
     --secondary-color: hsl(262, 80%, 65%);
     --tertiary-color: hsl(190, 85%, 55%);
-    --accent-color: hsl(45, 100%, 60%); */
+    --accent-color: hsl(45, 100%, 60%);
 
     /* Text */
     --text-color: hsl(0, 0%, 95%);
     --text-muted: hsl(0, 0%, 70%);
 
-    /* UI states (brightened for visibility on dark bg)
+    /* UI states (brightened for visibility on dark bg) */
     --success-color: hsl(145, 65%, 55%);
     --warning-color: hsl(38, 95%, 60%);
     --danger-color: hsl(0, 85%, 65%);
-    --info-color: hsl(200, 90%, 65%); */
+    --info-color: hsl(200, 90%, 65%);
 
     /* Borders / dividers */
     --border-color: hsl(222, 15%, 28%);
