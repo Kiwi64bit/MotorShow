@@ -362,7 +362,7 @@ textarea.form-control {
     justify-content: space-between;
     color: var(--navbar-text-color);
     padding: var(--spacing4) 0;
-    border-bottom: 1px solid color-mix(in srgb, var(--primary-color), transparent 85%);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .navbar>.container {
@@ -448,7 +448,7 @@ textarea.form-control {
 .footer {
     color: var(--text-color);
     padding: var(--spacing7) 0;
-    border-top: 1px solid color-mix(in srgb, var(--primary-color), transparent 85%);
+    border-top: 1px solid var(--border-color);
     font-family: var(--ff1);
 }
 
