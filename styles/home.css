@@ -1,0 +1,40 @@
+.hero_sec{
+    background-image: url("/assets/header-background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero_sec_content{
+    padding: 100px;
+    background-color: #00000069;
+}
+.hero_sec_content h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: #2f48c2;
+}
+
+.hero_sec_content p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+.hero_sec_content a {
+    border: 1px solid #2f48c2;
+    border-radius: 20px;
+    text-decoration: none;
+    padding:10px;
+    color: #2f48c2;
+    background-color: #ffffff20;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hero_sec_content a:hover{
+    background-color: #3b3b3b52;
+}
