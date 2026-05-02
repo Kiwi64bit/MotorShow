@@ -81,11 +81,11 @@ p, .stat-label {
   margin-left: var(--spacing7);
 }
 
-.car-img {
+.right-col-img {
   width: 120%;
 }
 
-.right-col .car-img img {
+.right-col .right-col-img img {
   width: 100%;
   height: auto;
   margin-left: 50px; 
