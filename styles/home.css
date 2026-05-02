@@ -38,3 +38,42 @@
 .hero_sec_content a:hover{
     background-color: #3b3b3b52;
 }
+
+
+.features {
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+.feature-box {
+    background: #383f4d93;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.feature-box:hover {
+    transform: translateY(-10px);
+    background-color: #232732;
+}
+.icon {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.feature-box h3 {
+    color: #7484d3;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.feature-box p {
+    font-size: 14px;
+    color: #ccc;
+}
