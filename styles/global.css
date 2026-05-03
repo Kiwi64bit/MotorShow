@@ -362,7 +362,7 @@ textarea.form-control {
     background-position: right var(--spacing1) center;
     background-size: 1rem;
 
-    padding: var(--spacing2) var(--spacing8) var(--spacing2) var(--spacing3);
+    padding: var(--spacing3) var(--spacing8) var(--spacing3) var(--spacing4);
     font-size: var(--fs6);
     color: var(--text-color);
     background-color: var(--surface-1, var(--base-color));
