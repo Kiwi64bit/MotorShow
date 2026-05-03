@@ -1,103 +1,82 @@
 <!DOCTYPE html>
-<html lang="ar" data-theme="light">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>تفاصيل السيارة</title>
+    <title>Car Details</title>
     <link rel="stylesheet" href="../styles/global.css">
 </head>
 <body>
-<nav class="navbar">
-    <div class="container">
-        <a href="index.html" class="navbar-brand">MotorShow</a>
-        <div class="navbar-nav">
-            <ul class="nav">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="listings.html" class="nav-link">Cars</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="blog.html" class="nav-link">News</a></li>
-                <li><a href="login.html" class="button primary">Sign In</a></li>
-            </ul>
-        </div>
-        <button class="theme-toggle" id="themeToggle">🌓</button>
-    </div>
-</nav>
-<!-- ========== القسم الرئيسي ========== -->
-<main class="container-lg" style="padding: 2rem 0;">
+<header>
+            <nav class="navbar">
+                <div class="container">
+                    <a href="#" class="navbar-brand">MotorShow</a>
 
-    <!-- صف عرض أفقي: صورة + تفاصيل -->
-    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                    <div class="navbar-nav">
+                        <ul class="nav">
+                            <a href="index.html" class="nav-link">Home</a>
+                            <a href="pages/listings.html" class="nav-link">Listings</a>
+                            <a href="pages/blog.html" class="nav-link">Blog</a>
+                            <a href="pages/about.html" class="nav-link">About</a>
+                            <a href="pages/contact.html" class="nav-link">Contact</a>
+                        </ul>
+                    </div>
 
-        <!-- 1. الصورة الكبيرة -->
-        <div style="flex: 1; min-width: 280px;">
-          <img 
+                    <button id="themeToggle" class="theme-toggler"></button>
+
+                    <button class="login button primary">Login</button>
+                </div>
+            </nav>
+        </header>
+        <!-- ② Main Content -->
+  <main>
+    
+
+    <button class="button primary">Primary</button>
+<button class="button secondary">Secondary</button>
+<img 
     src="../assets/car-cropped-img.png" 
     alt="صورة السيارة" 
-    style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
-/> 
-        </div>
-
-        <!-- 2. تفاصيل السيارة -->
-        <div style="flex: 1; min-width: 280px;">
-            <h1 style="margin-bottom: 0.5rem;">مرسيدس C-Class</h1>
-            <p style="font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">
-                السعر: <span>$43,000</span>
-            </p>
-            <p style="margin-bottom: 1.5rem; line-height: 1.8;">
-                سيارة سيدان فاخرة تجمع بين الأداء القوي والتصميم الأنيق.
-                مناسبة للعائلات ورجال الأعمال. تأتي بمحرك توربو ونظام أمان متكامل.
-            </p>
-
-            <!-- 3. الأزرار -->
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="test-drive.html" class="button primary">احجز تجربة قيادة</a>
-                <a href="#" class="button secondary">حمل الكتالوج</a>
-            </div>
-        </div>
-
+    style="width: 100%; max-width: 600px; border-radius: 8px;"
+/>
+<p><strong>Name:</strong> Mercedes-Benz C-Class</p>
+<p><strong>Description:</strong> The Mercedes-Benz C-Class is a luxury compact sedan that perfectly balances style and performance.</p>
+<p><strong>Year:</strong> 2024</p>
+<p><strong>Mileage:</strong> 15,000 miles</p>
+<p><strong>Fuel Type:</strong> Petrol</p>
+<p><strong>Transmission:</strong> Automatic</p>
+<p><strong>Price:</strong> $55,000</p>
+<p><strong>Doors:</strong> 4</p>
+<p><strong>Colors:</strong> Obsidian Black, Polar White, Selenite Grey, Designo Mojave Silver</p>
+    <div class="container-lg">
+    
     </div>
+  </main>
+<footer class="footer">
+            <div class="container">
+                <div class="footer-brand">
+                    <h3>MotorShow</h3>
+                    <p>Discover quality cars, fair prices, and a smoother buying experience.</p>
+                </div>
 
-    <!-- ========== جدول المواصفات ========== -->
-    <section style="margin-top: 2rem;">
-        <h2>المواصفات الفنية</h2>
-        <table class="specs-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
-            <thead>
-                <tr style="background-color: var(--primary-color); color: white;">
-                    <th style="padding: 0.75rem; text-align: right;">الخاصية</th>
-                    <th style="padding: 0.75rem; text-align: right;">التفاصيل</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">الماركة</td>
-                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">مرسيدس</td>
-                </tr>
-                <tr>
-                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">الموديل</td>
-                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">C-Class 2026</td>
-                </tr>
-                <tr>
-                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">المحرك</td>
-                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">4 سلندر تيربو</td>
-                </tr>
-                <tr>
-                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">ناقل الحركة</td>
-                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">أوتوماتيك 9 سرعات</td>
-                </tr>
-                <tr>
-                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">السرعة القصوى</td>
-                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">250 كم/س</td>
-                </tr>
-                <tr>
-                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">عدد المقاعد</td>
-                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">5 مقاعد</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+                <div class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Docs</a>
+                    <a href="#">Support</a>
+                </div>
+            </div>
 
-</main>
-<!-- ========== نهاية القسم الرئيسي ========== -->
+            <div class="footer-bottom">© 2026 MotorShow. All rights reserved.</div>
+        </footer>
+        <script>
+    const toggler = document.getElementById('themeToggler');
+    toggler.addEventListener('click', () => {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+  </script>
 </body>
 </html>
