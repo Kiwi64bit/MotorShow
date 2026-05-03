@@ -19,3 +19,26 @@
     color: var(--text-muted);
     margin-bottom: var(--spacing5);
 }
+.car-img {
+    width: 100%;
+    max-width: 300px;
+}
+.specs-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: var(--spacing4);
+}
+
+.table-cell {
+    border: 1px solid var(--border-color);
+    padding: var(--spacing3);
+}
+.specs-table tr:nth-child(even) {  
+    background-color: var(--surface-2);  
+}
+.table-cell {
+    padding: var(--spacing3);
+}
+.card {
+    margin-bottom: var(--spacing7);
+}
