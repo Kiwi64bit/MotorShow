@@ -1,5 +1,5 @@
 .hero_sec{
-    background-image: url('../../assets/images/header-background.jpg');
+    background-image: url('./assets/images/header-background.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
