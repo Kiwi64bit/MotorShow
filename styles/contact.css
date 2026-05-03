@@ -1,5 +1,5 @@
 main {
-    padding: var(--spacing9) var(--spacing4);
+     padding: var(--spacing9) var(--spacing4);
     display: flex;
     gap: 5rem;
 }
