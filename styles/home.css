@@ -1,5 +1,5 @@
 .hero_sec{
-    background-image: url('./assets/images/header-background.jpg');
+    background-image: url('/assets/images/header-background.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,13 +18,11 @@
     font-weight: bold;
     color: #2f48c2;
 }
-
 .hero_sec_content p {
     font-size: 16px;
     margin-bottom: 25px;
     color: #ddd;
 }
-
 .hero_sec_content a {
     border: 1px solid #2f48c2;
     border-radius: 20px;
@@ -69,11 +67,58 @@
     margin-bottom: 15px;
 }
 .feature-box h3 {
-    color: #7484d3;
+    color: #3145b8;
     margin-bottom: 10px;
     font-size: 20px;
 }
 .feature-box p {
     font-size: 14px;
     color: #ccc;
+}
+
+.brands {
+    padding: 50px;
+}
+.brands h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.brands-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.band-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    box-shadow: 0 0 10px #3145b871;
+}
+.band-img {
+    width: 100%;
+    height: 100%;
+}
+.band-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.band-card:hover .band-img img {
+    transform: scale(1.05);
+}
+.band-name {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+    text-shadow: 0 5px 10px rgba(0,0,0,0.4);
 }
