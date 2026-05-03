@@ -1,0 +1,21 @@
+.card {
+    background: var(--surface-1);
+    border: 1px solid var(--border-color);
+    border-radius: .75rem;
+    padding: var(--spacing6);
+    font-family: var(--ff2);
+}
+
+.card-title {
+    font-family: var(--ff1);
+    font-size: var(--fs5);
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: var(--spacing2);
+}
+
+.card-body {
+    font-size: var(--fs6);
+    color: var(--text-muted);
+    margin-bottom: var(--spacing5);
+}
