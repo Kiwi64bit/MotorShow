@@ -351,39 +351,6 @@ textarea.form-control {
     color: var(--warning-color);
 }
 
-/* Select */
-.select {
-    /* remove arrow */
-    appearance: none;
-
-    /* custom arrow */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23666' d='M5 7l5 5 5-5z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right var(--spacing1) center;
-    background-size: 1rem;
-
-    padding: var(--spacing3) var(--spacing8) var(--spacing3) var(--spacing4);
-    font-size: var(--fs6);
-    color: var(--text-color);
-    background-color: var(--surface-1, var(--base-color));
-    border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-    outline: none;
-    cursor: pointer;
-    transition: border-color 0.15s ease,
-        box-shadow 0.15s ease,
-        background-color 0.15s ease;
-}
-
-.select:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--primary-color), transparent 75%);
-}
-
-.select:hover {
-    border-color: color-mix(in srgb, var(--border-color), var(--text-color) 20%);
-}
-
 /* navbar */
 .navbar {
     --brand-font: "Bebas Neue", "Arial Narrow", Arial, Helvetica, sans-serif;
