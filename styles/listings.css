@@ -1,0 +1,136 @@
+.listings-container {
+    padding: var(--spacing6);
+}
+
+.listings-header h1 {
+    margin-bottom: var(--spacing6);
+}
+
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing4);
+}
+
+.result-count {
+    color: var(--text-muted);
+}
+
+.sort-label,
+.search-label,
+.layout-label {
+    margin-right: var(--spacing2);
+    color: var(--text-muted);
+}
+
+.searchbar {
+    width: auto;
+}
+
+.listings-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing4);
+    padding: var(--spacing4) 0;
+}
+
+.listings-body .filter-container {
+    flex: 1 1 300px;
+}
+
+.listings-body .filter-container .filter {
+    position: sticky;
+    top: var(--spacing4);
+    padding: var(--spacing3);
+    background-color: var(--surface-2);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing2);
+    margin-bottom: var(--spacing3);
+}
+
+.filter-options>* {
+    flex: 1 0 0;
+    min-width: 150px;
+}
+
+/* body[data-layout="sidebar"] .listings-body {
+    
+} */
+
+.listings-body .filter .form-group {
+    margin: 0;
+}
+
+.listings-body .filter .button {
+    width: 100%;
+}
+
+.listings-body .results {
+    flex: 999 1 650px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: var(--spacing4);
+}
+
+/* Car card */
+.car-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--surface-1);
+    border: 1px solid var(--border-color);
+    /* cursor: pointer; */
+    transition: filter 0.15s ease, scale 0.15s ease;
+}
+
+/* .car-card:hover {
+    filter: brightness(120%);
+    scale: 1.01;
+} */
+
+.car-card .card-header img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+}
+
+.car-card .card-body {
+    padding: var(--spacing2);
+}
+
+.car-card .card-body .name {
+    margin-bottom: var(--spacing2);
+    font-size: var(--fs5);
+    font-weight: 500;
+}
+
+.car-card .card-body .summary {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.car-card .card-body .bottom-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-card .card-body .view-details {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing1);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.car-card .card-body .view-details:hover {
+    text-decoration: underline;
+}

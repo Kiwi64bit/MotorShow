@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Listings</title>
+        <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/listings.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a href="#" class="navbar-brand">MotorShow</a>
+
+                    <div class="navbar-nav">
+                        <ul class="nav">
+                            <a href="../index.html" class="nav-link">Home</a>
+                            <a href="listings.html" class="nav-link">Listings</a>
+                            <a href="blog.html" class="nav-link">Blog</a>
+                            <a href="about.html" class="nav-link">About</a>
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </ul>
+                    </div>
+
+                    <button id="themeToggle" class="theme-toggler"></button>
+
+                    <button class="login button primary">Login</button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="listings-container">
+            <div class="listings-header">
+                <h1>Listings</h1>
+
+                <div class="info-row">
+                    <div class="layout-select">
+                        <label for="layout" class="layout-label">Layout</label>
+                        <select class="layout-options select" name="layout" id="layout">
+                            <option value="Default">Full</option>
+                            <option value="Default">Sidebar</option>
+                        </select>
+                    </div>
+
+                    <div class="sorting">
+                        <label for="sortBy" class="sort-label">sort by</label>
+                        <select class="sorting-options select" name="sortBy" id="sortBy">
+                            <option value="Default">Rating</option>
+                            <option value="Default">Price (ascending)</option>
+                            <option value="Default">Price (descending)</option>
+                            <option value="Default">Date (oldest first)</option>
+                            <option value="Default">Date (newest first)</option>
+                            <option value="Default">Alphabetical</option>
+                        </select>
+                    </div>
+
+                    <div class="search">
+                        <label for="search" class="search-label">Search</label>
+                        <input type="text" name="search" id="searchbar" class="form-control searchbar" placeholder="BMW" />
+                    </div>
+
+                    <div class="result-count">showing 1 - 12 of 15 results</div>
+                </div>
+            </div>
+
+            <div class="listings-body">
+                <aside class="filter-container">
+                    <div class="filter">
+                        <form action="" id="filterOptions">
+                            <div class="filter-options">
+                                <div class="form-group">
+                                    <label class="form-label" for="brand">Brand</label>
+                                    <input type="text" name="brand" id="brand" class="form-control" placeholder="BMW" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="model">Model</label>
+                                    <input type="text" name="model" id="model" class="form-control" placeholder="BMW" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="year">Year</label>
+                                    <input type="text" name="year" id="year" class="form-control" placeholder="BMW" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="price">Price</label>
+                                    <select class="select" name="price" id="price">
+                                        <option value="0+" selected>Any</option>
+                                        <option value="0-50000">Under $50,000</option>
+                                        <option value="50000-70000">$50,000 - $70,000</option>
+                                        <option value="70000-90000">$70,000 - $90,000</option>
+                                        <option value="90000-110000">$90,000 - $110,000</option>
+                                        <option value="110000-130000">$110,000 - $130,000</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button class="button primary" id="findResults">Find Results</button>
+                        </form>
+                    </div>
+                </aside>
+
+                <div class="results" id="resultsContainer">
+                    <!-- Cars will be injected via JavaScript -->
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-brand">
+                    <h3>MotorShow</h3>
+                    <p>Discover quality cars, fair prices, and a smoother buying experience.</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Docs</a>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">© 2026 MotorShow. All rights reserved.</div>
+        </footer>
+
+        <script src="../scripts/fetchJson.js"></script>
+        <script src="../scripts/loadCars.js"></script>
+        <script src="../scripts/listings.js"></script>
+        <script src="../scripts/toggleTheme.js"></script>
+    </body>
+</html>
