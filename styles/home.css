@@ -135,7 +135,8 @@ header{
     background-color: #3339474d;
 }
 .top-cars-header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 .top-cars-header h2 {
     font-family: 'Bebas Neue', sans-serif;
@@ -143,6 +144,22 @@ header{
     letter-spacing: 3px;
     color: #172579;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.555);
+}
+.view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: color 0.25s;
+}
+.view-all-btn:hover { 
+    color: #889af0bd;
 }
 .top-cars-cards {
     display: flex;
@@ -243,7 +260,7 @@ header{
     border: 1px solid white;
     color: white;
     font-family: 'DM Sans', sans-serif;
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 1.5px;
     text-transform: uppercase;
