@@ -12,6 +12,7 @@
             "doors": 4,
             "colors": ["Obsidian Black", "Polar White", "Selenite Grey", "Designo Mojave Silver"],
             "body": "Sedan",
+            "best" : true,
             "image": "./assets/images/cars/Mercedes-BenzC.png"
         },
         {
@@ -40,6 +41,7 @@
             "doors": 4,
             "colors": ["Manufaktur Onyx Black", "Manufaktur Diamond White", "Obsidian Black", "Nautic Blue"],
             "body": "Sedan",
+            "best" : true,
             "image": "./assets/images/cars/Mercedes-BenzS.png"
         },
         {
@@ -70,6 +72,7 @@
             "doors": 4,
             "colors": ["Alpine White", "Black Sapphire", "Portimao Blue", "Brooklyn Grey"],
             "body": "Sedan",
+            "best" : true,
             "image": "./assets/images/cars/BMW3.png"
         },
         {
@@ -98,6 +101,7 @@
             "doors": 4,
             "colors": ["Frozen Pure Grey", "Tanzanite Blue", "Sophisto Grey", "Mineral White"],
             "body": "Sedan",
+            "best" : true,
             "image": "./assets/images/cars/BMW7.png"
         },
         {
@@ -128,6 +132,7 @@
             "doors": 4,
             "colors": ["Brilliant Black", "Glacier White", "Navarra Blue", "Floret Silver"],
             "body": "Sedan",
+            "best" : true,
             "image": "./assets/images/cars/Audi-A4.png"
         },
         {
@@ -156,6 +161,7 @@
             "doors": 5,
             "colors": ["Glacier White", "Mythos Black", "Navarra Blue", "Chronos Grey"],
             "body": "SUV",
+            "best" : true,
             "image": "./assets/images/cars/Audi-Q5.png"
         },
         {
@@ -186,6 +192,7 @@
             "doors": 2,
             "colors": ["Guards Red", "GT Silver", "Gentian Blue", "Jet Black"],
             "body": "Coupe",
+            "best" : true,
             "image": "./assets/images/cars/Porsche911.png"
         },
         {
@@ -214,6 +221,7 @@
             "doors": 5,
             "colors": ["Papaya Metallic", "Mamba Green", "Gentian Blue", "Crayon"],
             "body": "SUV",
+            "best" : true,
             "image": "./assets/images/cars/Porsche-Macan.png"
         },
         {
