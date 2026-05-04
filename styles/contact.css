@@ -1,10 +1,19 @@
-.form-item{
-    border-radius: 8px;
-    width:40%;
-   margin: 77px;
+.herosection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/bluecar.jpeg);
+    height: 280px;  
+    background-size:cover;
 }
-.butt{
-    margin-left: 150px;
+.herosection h1{
+    color: rgb(243, 255, 240);
+    text-shadow:  3px 5px 15px rgb(31, 126, 228);
+}
+.form-item{
+    width:40%; 
+    animation:tran 1s 0.5s forwards ;  
+    opacity: 0;
 }
 button:hover{
     box-shadow: 0px 5px 3px rgba(28, 27, 27, 0.784);
@@ -12,39 +21,63 @@ button:hover{
    font-size: 19px;
 }
 .info{
+   
+    width: fit-content;
+    box-shadow: 0px 3px 15px gray;
     border-radius: 10px;
     border: 1px solid rgba(58, 58, 58, 0.163);
-    width: 36%;
-    margin: 50px;
-    box-shadow: 0px 3px 15px gray;
-    height: 74vh;
+    height: fit-content;
+    padding: 30px;
+    animation: tran 1s 0.5s forwards;
+    opacity: 0;
 }
-.herosection{
-    display: flex;
-    background-image: url(../assets/bluecar.jpeg);
-    height: 280px;  
-    background-size: cover;
+@keyframes tran{
+ from{
+   opacity: 0;
+   transform: translatey(150px)
+ }
+ to{
+  opacity: 1;
+  transform: translatey(0);
+ }
 }
-.herosection h1{
-    color: rgb(243, 255, 240);
-    margin: auto;
-    text-shadow:  3px 5px 15px rgb(31, 126, 228);
-}
+
 iframe{
- width: 50%;   
-margin:auto ;
-height: 400px;
-display: block;
-margin-top: 10px;
-margin-bottom: 40px;
+ width: 80%;   
+height: 490px;
+
 border-radius: 10px;
 }
-.div-info {
-    margin: 30px;
+
+.loca h5{
+    margin-bottom: 10px;
+    width:fit-content;
+    padding:13px ;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px gray;
+    
 }
+
+.loca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 90px;
+}
+
+h5 .fa-solid{
+    margin: 2px;
+}
+
 .fa-solid{
     margin: 30px;
 }
+
 .all{
     display:flex ;
+    justify-content:center;
+    gap: 17%;
+    margin: 80px;
 }
