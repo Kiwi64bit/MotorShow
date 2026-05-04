@@ -1,15 +1,4 @@
-.herosection{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../assets/bluecar.jpeg);
-    height: 280px;  
-    background-size:cover;
-}
-.herosection h1{
-    color: rgb(243, 255, 240);
-    text-shadow:  3px 5px 15px rgb(31, 126, 228);
-}
+
 .form-item{
     width:40%; 
     animation:tran 1s 0.5s forwards ;  
