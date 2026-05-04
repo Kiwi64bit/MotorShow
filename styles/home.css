@@ -322,3 +322,65 @@ header{
     height: 100%;
     object-fit: cover;
 }
+
+
+.reviews-sec {
+    margin: 30px;
+    padding: 50px;
+    background-color: #3536392b;
+}
+.reviews-sec h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 55px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+.reviews-cards {
+    display: flex;
+    gap: 25px;
+}
+.reviews-card {
+    background-color: #232732;
+    border: 1px solid rgba(0, 0, 0, 0.388);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.614);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.3s;
+}
+.reviews-card:hover {
+    border: 1px solid rgba(94, 93, 93, 0.388);
+    box-shadow: 0 0 8px rgba(94, 93, 93, 0.388);
+}
+.stars{
+    text-align: center;
+}
+.stars i {
+    color: gold;
+    text-shadow: 0 0 5px gold;
+    font-size: 20px;
+}
+.reviews-card p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+.user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.user i{
+    font-size: 25px;
+    color: #6288f2;
+}
+.user h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.user span {
+    font-size: 12px;
+}
