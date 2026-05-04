@@ -3,6 +3,7 @@
         {
             "id": 1,
             "name": "Mercedes-Benz C-Class",
+            "brand": "Mercedes",
             "description": "The Mercedes-Benz C-Class is a luxury compact sedan that perfectly blends elegance with performance. Featuring a refined turbocharged engine, a sophisticated MBUX infotainment system, and a sumptuously crafted interior with premium materials. It offers exceptional ride comfort, advanced driver-assistance systems, and a sporty yet refined driving experience that defines modern luxury motoring.",
             "year": 2024,
             "miles": 15000,
@@ -18,6 +19,7 @@
         {
             "id": 2,
             "name": "Mercedes-Benz E-Class",
+            "brand": "Mercedes",
             "description": "The Mercedes-Benz E-Class represents the pinnacle of the executive sedan segment, offering an extraordinary combination of luxury, technology, and performance. With its cutting-edge MBUX system featuring augmented reality navigation, massaging seats, and a powerful range of engines, the E-Class delivers a first-class driving experience. Its aerodynamic design and adaptive suspension ensure supreme comfort on every journey.",
             "year": 2024,
             "miles": 12000,
@@ -32,6 +34,7 @@
         {
             "id": 3,
             "name": "Mercedes-Benz S-Class",
+            "brand": "Mercedes",
             "description": "The Mercedes-Benz S-Class is the ultimate expression of automotive luxury and innovation. This flagship sedan features the most advanced technology available, including a 12.8-inch OLED touchscreen, rear-axle steering, active ambient lighting with 64 colors, and an E-ACTIVE BODY CONTROL suspension system. Every detail has been meticulously crafted to provide an unmatched level of comfort, safety, and prestige for the most discerning drivers.",
             "year": 2024,
             "miles": 8000,
@@ -47,6 +50,7 @@
         {
             "id": 4,
             "name": "Mercedes-Benz GLE",
+            "brand": "Mercedes",
             "description": "The Mercedes-Benz GLE is a commanding luxury SUV that delivers an outstanding driving experience both on and off the road. Equipped with a powerful 3.0L turbocharged inline-6 engine, 4MATIC all-wheel drive, and the innovative E-ACTIVE BODY CONTROL suspension, the GLE glides effortlessly over any terrain. Its spacious seven-seat interior, panoramic sunroof, and comprehensive suite of driver-assistance technologies make it the perfect family luxury vehicle.",
             "year": 2024,
             "miles": 18000,
@@ -63,6 +67,7 @@
         {
             "id": 5,
             "name": "BMW 3 Series",
+            "brand": "BMW",
             "description": "The BMW 3 Series is the benchmark for sporty premium sedans, delivering an exhilarating driving experience with razor-sharp handling and a perfectly balanced chassis. Powered by a responsive TwinPower Turbo engine mated to an 8-speed Steptronic transmission, it offers thrilling acceleration and dynamic agility. The cabin features the latest BMW Live Cockpit Professional with a 12.3-inch digital cluster and 10.25-inch control display, surrounded by high-quality materials and ergonomic design.",
             "year": 2024,
             "miles": 20000,
@@ -78,6 +83,7 @@
         {
             "id": 6,
             "name": "BMW 5 Series",
+            "brand": "BMW",
             "description": "The BMW 5 Series defines the executive sedan class, seamlessly merging sporty driving dynamics with premium comfort and advanced technology. Its elegant exterior design conceals a powerful range of engines, while the interior boasts the BMW Curved Display with a 12.3-inch instrument cluster and 14.9-inch infotainment screen. With standard xDrive all-wheel drive, adaptive suspension, and a comprehensive suite of BMW driver assistance systems, the 5 Series is built for those who demand excellence.",
             "year": 2024,
             "miles": 14000,
@@ -92,6 +98,7 @@
         {
             "id": 7,
             "name": "BMW 7 Series",
+            "brand": "BMW",
             "description": "The BMW 7 Series is a technological tour de force representing the very apex of the BMW lineup. This flagship luxury sedan introduces revolutionary features including a 31.3-inch 8K Theatre Screen for rear passengers, an automated parking assistant, crystal glass controls, and a Bowers & Wilkins Diamond surround sound system. Its plug-in hybrid powertrain delivers effortless performance while reducing emissions, and the adaptive air suspension provides cloud-like comfort regardless of road conditions.",
             "year": 2024,
             "miles": 6000,
@@ -107,6 +114,7 @@
         {
             "id": 8,
             "name": "BMW X5",
+            "brand": "BMW",
             "description": "The BMW X5 is a legendary luxury Sports Activity Vehicle that sets the standard in its segment with its perfect fusion of performance, versatility, and sophistication. Powered by a potent 3.0L TwinPower Turbo six-cylinder engine with 48V mild-hybrid technology and xDrive all-wheel drive, it tackles any terrain with confidence. The X5 offers an expansive interior with optional third-row seating, a panoramic moonroof, and the latest BMW Operating System 8 for seamless connectivity and control.",
             "year": 2024,
             "miles": 22000,
@@ -123,6 +131,7 @@
         {
             "id": 9,
             "name": "Audi A4",
+            "brand": "Audi",
             "description": "The Audi A4 is a refined premium compact sedan that epitomizes Audi's Vorsprung durch Technik philosophy. With its precise quattro all-wheel drive system, smooth 2.0 TFSI turbocharged engine, and progressive steering, it delivers a composed and engaging drive. Inside, the Virtual Cockpit digital dashboard, MMI touch infotainment system, and meticulously crafted cabin with genuine aluminum and wood trims create an environment of understated luxury and technological sophistication.",
             "year": 2024,
             "miles": 16000,
@@ -138,6 +147,7 @@
         {
             "id": 10,
             "name": "Audi A6",
+            "brand": "Audi",
             "description": "The Audi A6 is an executive sedan that masterfully balances luxury, technology, and performance. Its mild-hybrid powertrain improves efficiency without sacrificing performance, while the adaptive air suspension delivers an exceptionally smooth and controlled ride. The dual-screen MMI touch response system with haptic feedback, Bang & Olufsen 3D Sound System, and exquisitely finished interior with available fine Nappa leather make the A6 a sanctuary of premium motoring.",
             "year": 2024,
             "miles": 11000,
@@ -152,6 +162,7 @@
         {
             "id": 11,
             "name": "Audi Q5",
+            "brand": "Audi",
             "description": "The Audi Q5 is a mid-size premium SUV that combines dynamic driving characteristics with practical everyday versatility. The standard quattro all-wheel drive system with ultra technology intelligently distributes power to maximize efficiency and grip. Its elegant and timeless design is matched by a superbly crafted interior featuring a 10.1-inch MMI display, virtual cockpit plus, available panoramic sunroof, and generous cargo space, making the Q5 an ideal companion for every adventure.",
             "year": 2024,
             "miles": 19000,
@@ -167,6 +178,7 @@
         {
             "id": 12,
             "name": "Audi Q7",
+            "brand": "Audi",
             "description": "The Audi Q7 is a full-size luxury SUV that offers a commanding presence and exceptional capability in an elegantly designed package. With seating for seven, a powerful 3.0L TFSI engine, and standard quattro all-wheel drive, it handles everything from family road trips to challenging terrain with equal aplomb. The Q7 features a 12.3-inch Audi virtual cockpit plus, dual rear touchscreens for passengers, available air suspension, and a comprehensive array of safety and driver assistance technologies.",
             "year": 2024,
             "miles": 13000,
@@ -183,6 +195,7 @@
         {
             "id": 13,
             "name": "Porsche 911",
+            "brand": "Porsche",
             "description": "The Porsche 911 is a living legend — an iconic sports car that has continuously redefined performance over six decades while staying true to its timeless design philosophy. The latest generation features a 3.0L twin-turbocharged flat-six engine producing 379 hp, an 8-speed PDK dual-clutch transmission, and Porsche Active Suspension Management for razor-sharp handling. Inside, the blend of driver-focused cockpit design and modern connectivity creates an unmatched sports car experience.",
             "year": 2024,
             "miles": 5000,
@@ -198,6 +211,7 @@
         {
             "id": 14,
             "name": "Porsche Cayenne",
+            "brand": "Porsche",
             "description": "The Porsche Cayenne proves that a luxury SUV can deliver genuine sports car performance without compromising on practicality or comfort. Its turbocharged V6 or V8 engine options, Porsche Traction Management all-wheel drive, and optional air suspension with Porsche Active Suspension Management deliver breathtaking performance. The Cayenne's spacious five-seat interior, advanced PCM infotainment system with a 12.3-inch touchscreen, and meticulous craftsmanship reaffirm its position as the benchmark luxury performance SUV.",
             "year": 2024,
             "miles": 10000,
@@ -212,6 +226,7 @@
         {
             "id": 15,
             "name": "Porsche Macan",
+            "brand": "Porsche",
             "description": "The Porsche Macan is a compact luxury SUV that delivers an exhilarating driving experience normally associated with pure sports cars. With its turbocharged four-cylinder engine, Porsche Traction Management all-wheel drive system, and dynamic chassis control, the Macan corners with precision and accelerates with authority. The refined interior features a GT Sport steering wheel, sport seats with extensive adjustment, and the latest Porsche Communication Management system for seamless connectivity.",
             "year": 2024,
             "miles": 25000,
@@ -227,6 +242,7 @@
         {
             "id": 16,
             "name": "Porsche Panamera",
+            "brand": "Porsche",
             "description": "The Porsche Panamera is a four-door sports car that refuses to compromise, delivering supercar performance in an executive grand tourer package. Its powerful turbocharged V6 or V8 engines, adaptive air suspension, and rear-axle steering provide dynamics that defy its size. The Panamera's exquisitely crafted interior with available four individual seats, panoramic roof system, Burmester 3D High-End Surround Sound System, and innovative curved widescreen display create an unmatched environment of luxury and technology.",
             "year": 2024,
             "miles": 9000,
