@@ -1,65 +1,54 @@
-function createCarCard(data) {
-    const card = document.createElement("div");
-    card.classList.add("car-card");
-    card.innerHTML = `
-        <div class="card-header">
-            <img src="${data.image}" alt="car image" onerror="this.src = 'https://placehold.co/600x400?text=Failed+to+load'" />
-        </div>
-        <div class="card-body">
-            <h5 class="name">
-                <span class="brand">${data.name}</span>
-                <span class="year">${data.year}</span>
-            </h5>
-            <p class="summary">
-                ${data.description}
-            </p>
-            <div class="bottom-info">
-                <h5 class="price">
-                    ${data.price.toLocaleString("en-EG", {
-                        style: "currency",
-                        currency: "EGP",
-                        maximumFractionDigits: 0,
-                    })}
-                </h5>
-                <a href="#" class="view-details">
-                    View Details
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none">
-                        <path
-                            d="M 2 12 L 12 2 M 6 2 H 12 V 8"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    `;
+const resultsContainer = document.getElementById('resultsContainer');
 
-    return card;
-}
+fetch('../db.json')
+    .then(res => res.json())
+    .then(data => {
+        const allCars = data.cars;
 
-function loadCars(container, carsData) {
-    container.innerHTML = "";
-    for (const car of carsData) {
-        const card = createCarCard(car);
-        container.appendChild(card);
-    }
-}
+        resultsContainer.innerHTML = '';
 
-var resultsContainer = document.getElementById("resultsContainer");
-var cars;
+        allCars.forEach((car, i) => {
+            const card = document.createElement('div');
+            card.classList.add('car-card');
 
-fetchJson("../db.json")
-    .then(result => {
-        cars = result.cars;
-        return result;
+            card.innerHTML = `
+                <div class="card-img">
+                    <img src="../${car.image.replace('./', '')}" alt="${car.name}">
+                </div>
+                <div class="card-body">
+                    <div class="car-head">
+                        <h3>${car.name}</h3>
+                    </div>
+                    <div class="car-features">
+                        <div class="car-feature">
+                            <i class="fa-solid fa-gauge"></i>
+                            <span>${car.miles.toLocaleString()} mi</span>
+                        </div>
+                        <div class="car-feature">
+                            <i class="fa-solid fa-gas-pump"></i>
+                            <span>${car.fuel}</span>
+                        </div>
+                        <div class="car-feature">
+                            <i class="fa-solid fa-gears"></i>
+                            <span>${car.transmission}</span>
+                        </div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-price">
+                            $${car.price.toLocaleString()}
+                        </div>
+                        <a href="listing_details.html?id=${car.id}" class="view-btn">
+                            Details <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            resultsContainer.appendChild(card);
+
+            setTimeout(() => {
+                card.classList.add('show');
+            }, i * 100);
+        });
     })
-    .then(result => {
-        loadCars(resultsContainer, cars);
-    });
+    .catch(error => console.log(error));
