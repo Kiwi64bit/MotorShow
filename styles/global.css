@@ -477,56 +477,76 @@ textarea.form-control {
     translate: calc(var(--width) - var(--thumb-width) - var(--margin)) -50%;
 }
 
-/* footer */
+
 .footer {
-    color: var(--text-color);
-    padding: var(--spacing7) 0;
+    padding: 50px 50px 0 50px;
     border-top: 1px solid var(--border-color);
     font-family: var(--ff1);
 }
-
-.footer .container {
+.footer-top {
     display: flex;
     justify-content: space-between;
-    gap: var(--spacing6);
-    flex-wrap: wrap;
+    gap: 50px;
+    padding-bottom: 20px;
 }
-
 .footer-brand {
-    max-width: 20rem;
+    max-width: 400px;
 }
-
 .footer-brand h3 {
     font-family: "Bebas Neue", "Arial Narrow", Arial, sans-serif;
     color: var(--primary-color);
-    font-size: var(--fs3);
-    margin-bottom: var(--spacing2);
+    font-size: 40px;
+    margin-bottom: 20px;
 }
-
 .footer-brand p {
     font-family: var(--ff2);
     color: var(--text-muted);
     font-size: var(--fs6);
 }
-
-.footer-links {
-    display: flex;
-    gap: var(--spacing4);
-    flex-wrap: wrap;
+.footer-links h4,
+.footer-social h4 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: rgb(155, 155, 203);
 }
-
+.footer-links ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 .footer-links a {
     text-decoration: none;
     color: var(--text-color);
     transition: color 0.15s ease;
 }
-
 .footer-links a:hover {
     color: var(--primary-color);
 }
-
-.footer-bottom {
-    margin-top: var(--spacing6);
-    text-align: center;
-    color: var(--text-muted);
+.social-icons {
+    display: flex;
+    flex-direction: column;
 }
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    color: var(--text-color);
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+.footer-bottom {
+    padding: 20px;
+    border-top: 1px solid ;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+
+
