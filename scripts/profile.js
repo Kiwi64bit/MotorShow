@@ -19,7 +19,7 @@ const editBtn = document.getElementById("editBtn");
 const cancelBtn = document.getElementById("cancelBtn");
 const logoutBtn = document.getElementById("logoutBtn");
 
-// ---------------- DISPLAY ----------------
+// render user
 function renderUser() {
     displayName.textContent = currentUser.name;
     displayEmail.textContent = currentUser.email;
@@ -34,7 +34,7 @@ function renderUser() {
 
 renderUser();
 
-// ---------------- EDIT MODE ----------------
+// enter edit mode
 editBtn.addEventListener("click", () => {
     viewMode.classList.add("hidden");
     editMode.classList.remove("hidden");
@@ -48,7 +48,7 @@ cancelBtn.addEventListener("click", () => {
     viewMode.classList.remove("hidden");
 });
 
-// ---------------- SAVE ----------------
+// save edit
 editMode.addEventListener("submit", e => {
     e.preventDefault();
 
@@ -72,7 +72,7 @@ editMode.addEventListener("submit", e => {
     viewMode.classList.remove("hidden");
 });
 
-// ---------------- LOGOUT ----------------
+// logout
 logoutBtn.addEventListener("click", () => {
     const confirmLogout = confirm("Are you sure you want to sign out?");
 
