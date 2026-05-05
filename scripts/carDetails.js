@@ -1,17 +1,15 @@
 const params = new URLSearchParams(window.location.search);
-    const carId  = parseInt(params.get('id'));
+const carId = parseInt(params.get("id"));
 
-    fetch('../db.json')
-        .then(res => res.json())
-        .then(data => {
-            const car = data.cars.find(c => c.id === carId);
+fetchJson("../db.json")
+    .then(data => {
+        const car = data.find(c => c.id === carId);
 
-            const related = data.cars.filter(c => c.brand === car.brand && c.id !== car.id);
-            document.title = `${car.name} — MotorShow`;
-            const imgSrc = '../' + car.image.replace('./', '');
+        const related = data.filter(c => c.brand === car.brand && c.id !== car.id);
+        document.title = `${car.name} — MotorShow`;
+        const imgSrc = "../" + car.image.replace("./", "");
 
-            document.getElementById('pageContent').innerHTML = `
-    
+        document.getElementById("pageContent").innerHTML = `
                 <div class="detail-hero">
                     <div class="detail-img-wrap">
                         <img src="${imgSrc}" alt="${car.name}">
@@ -60,7 +58,7 @@ const params = new URLSearchParams(window.location.search);
                         <div class="colors-section">
                             <p class="colors-label">Available Colors</p>
                             <div class="colors-list">
-                                ${car.colors.map(color => `<span class="color-tag">${color}</span>`).join('')}
+                                ${car.colors.map(color => `<span class="color-tag">${color}</span>`).join("")}
                             </div>
                         </div>
 
@@ -74,15 +72,19 @@ const params = new URLSearchParams(window.location.search);
                 </div>
 
 
-                ${related.length > 0 ? `
+                ${
+                    related.length > 0
+                        ? `
 
                 <div class="related-section">
                     <h2 class="section-title">More From ${car.brand}</h2>
                     <div class="related-cards" id="relatedCards">
-                        ${related.map((r, i) => `
+                        ${related
+                            .map(
+                                (r, i) => `
                             <div class="car-card" style="transition-delay: ${i * 100}ms">
                                 <div class="card-img">
-                                    <img src="../${r.image.replace('./', '')}" alt="${r.name}">
+                                    <img src="../${r.image.replace("./", "")}" alt="${r.name}">
                                 </div>
                                 <div class="card-body">
                                     <div class="car-head">
@@ -112,15 +114,19 @@ const params = new URLSearchParams(window.location.search);
                                     </div>
                                 </div>
                             </div>
-                        `).join('')}
+                        `,
+                            )
+                            .join("")}
                     </div>
-                </div>` : ''}
+                </div>`
+                        : ""
+                }
             `;
 
-            setTimeout(() => {
-                document.querySelectorAll('.related-cards .car-card').forEach(card => {
-                    card.classList.add('show');
-                });
-            }, 100);
-        })
-        .catch(err => console.log(err));
+        setTimeout(() => {
+            document.querySelectorAll(".related-cards .car-card").forEach(card => {
+                card.classList.add("show");
+            });
+        }, 100);
+    })
+    .catch(err => console.error(err));

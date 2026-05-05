@@ -1,9 +1,8 @@
 const TopCarsCards = document.getElementById('TopCarsCards');
 
-fetch('db.json')
-    .then(res => res.json())
+fetchJson('db.json')
     .then(data => {
-        const best = data.cars.filter(c => c.best === true);
+        const best = data.filter(c => c.best === true);
 
         TopCarsCards.innerHTML = '';
 
@@ -51,4 +50,4 @@ fetch('db.json')
             }, i * 200);
         });
     })
-    .catch(error => console.log(error));
+    .catch(error => console.error(error));

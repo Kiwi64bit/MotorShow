@@ -5,7 +5,7 @@ var filteredCars;
 
 fetchJson("../db.json")
     .then(result => {
-        cars = result.cars;
+        cars = result;
         filteredCars = cars;
         return result;
     })
@@ -13,7 +13,8 @@ fetchJson("../db.json")
         cars = cars.sort((a, b) => a.name.localeCompare(b.name));
         loadCars(resultsContainer, cars);
         resultsCount.textContent = `showing ${cars.length} results`;
-    });
+    })
+    .catch(error => console.error(error));
 
 function createCarCard(car) {
     const card = document.createElement("div");
