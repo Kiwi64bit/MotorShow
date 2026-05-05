@@ -1,37 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-  <head>
-      <meta charset="UTF-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Car Details</title>
-      <link rel="stylesheet" href="../styles/global.css">
-      <link rel="stylesheet" href="../styles/listing_details.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-          <div class="container">
-              <a href="#" class="navbar-brand">MotorShow</a>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/global.css">
+        <link rel="stylesheet" href="../styles/listing_details.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <title>Car Details</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a href="#" class="navbar-brand">MotorShow</a>
 
-              <div class="navbar-nav">
-                  <ul class="nav">
-                      <a href="../index.html" class="nav-link">Home</a>
-                      <a href="listings.html" class="nav-link">Listings</a>
-                      <a href="blog.html" class="nav-link">Blog</a>
-                      <a href="about.html" class="nav-link">About</a>
-                      <a href="contact.html" class="nav-link">Contact</a>
-                  </ul>
-              </div>
+                    <div class="navbar-nav">
+                        <ul class="nav">
+                            <a href="../index.html" class="nav-link">Home</a>
+                            <a href="listings.html" class="nav-link">Listings</a>
+                            <a href="blog.html" class="nav-link">Blog</a>
+                            <a href="about.html" class="nav-link">About</a>
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </ul>
+                    </div>
 
-              <button id="themeToggle" class="theme-toggler"></button>
+                    <button id="themeToggle" class="theme-toggler"></button>
 
-              <button class="login button primary">Login</button>
-          </div>
-      </nav>
-    </header>
+                    <button class="login button primary">Login</button>
+                </div>
+            </nav>
+        </header>
 
-    <footer class="footer">
+        <div id="pageContent">
+            
+        </div>
+
+
+        <footer class="footer">
             <div class="footer-top">
                 <div class="footer-brand">
                     <h3>MotorShow</h3>
@@ -74,5 +79,8 @@
                 <p>© 2025 MotorShow. All rights reserved.</p>
             </div>
         </footer>
-  </body>
+
+        <script src="../scripts/toggleTheme.js"></script>
+        <script src="../scripts/car_details.js"></script>
+    </body>
 </html>
