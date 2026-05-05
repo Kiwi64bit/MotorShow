@@ -50,6 +50,7 @@ function loadCars(container, carsData) {
 }
 
 var resultsContainer = document.getElementById("resultsContainer");
+var resultsCount = document.getElementById("resultCount");
 var cars;
 
 fetchJson("../db.json")
@@ -59,4 +60,5 @@ fetchJson("../db.json")
     })
     .then(result => {
         loadCars(resultsContainer, cars);
+        resultsCount.textContent = `showing ${cars.length} results`;
     });

@@ -42,6 +42,7 @@ function parsePrice(str) {
     };
 }
 
+var filteredCars = cars;
 const filterForm = document.getElementById("filterOptions");
 
 filterForm.addEventListener("submit", event => {
@@ -49,7 +50,7 @@ filterForm.addEventListener("submit", event => {
     const filters = getInputFields(filterForm);
     const priceRange = parsePrice(filters.price);
 
-    const filteredData = cars.filter(car => {
+    filteredCars = cars.filter(car => {
         const [brand, model] = car.name.split(" ");
         const price = Number(car.price);
 
@@ -61,7 +62,8 @@ filterForm.addEventListener("submit", event => {
         return matchBrand && matchModel && matchYear && matchPrice;
     });
 
-    loadCars(resultsContainer, filteredData);
+    loadCars(resultsContainer, filteredCars);
+    resultsCount.textContent = `showing ${filteredCars.length} results`;
 });
 
 /** @type {HTMLInputElement} */
@@ -70,14 +72,13 @@ const searchbar = document.getElementById("searchbar");
 searchbar.addEventListener("input", event => {
     const query = searchbar.value.toLowerCase().trim();
 
-    const filteredData = cars.filter(car => {
+    const result = filteredCars.filter(car => {
         const matchName = car.name.toLowerCase().includes(query);
         const matchYear = car.year.toString().includes(query);
 
         return matchName || matchYear;
     });
 
-    loadCars(resultsContainer, filteredData);
+    loadCars(resultsContainer, result);
+    resultsCount.textContent = `showing ${result.length} results`;
 });
-
-
