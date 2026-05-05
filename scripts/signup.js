@@ -39,5 +39,7 @@ function signup(name, emailValue, phone, passwordValue) {
 
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("currentUser", JSON.stringify(newUser));
     alert("Signup successful!");
+    window.location.href = "../index.html"
 }

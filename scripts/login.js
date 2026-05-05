@@ -33,4 +33,5 @@ function login(emailValue, passwordValue) {
     // success
     localStorage.setItem("currentUser", JSON.stringify(user));
     alert("Login successful!");
+    window.location.href = "../index.html"
 }
