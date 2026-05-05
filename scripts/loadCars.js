@@ -1,23 +1,23 @@
-const resultsContainer = document.getElementById('resultsContainer');
+const resultsContainer = document.getElementById("resultsContainer");
 
-fetch('../db.json')
+fetch("../db.json")
     .then(res => res.json())
     .then(data => {
         const allCars = data.cars;
 
-        resultsContainer.innerHTML = '';
+        resultsContainer.innerHTML = "";
 
         allCars.forEach((car, i) => {
-            const card = document.createElement('div');
-            card.classList.add('car-card');
+            const card = document.createElement("div");
+            card.classList.add("car-card");
 
             card.innerHTML = `
                 <div class="card-img">
-                    <img src="../${car.image.replace('./', '')}" alt="${car.name}">
+                    <img src="../${car.image.replace("./", "")}" alt="${car.name}">
                 </div>
                 <div class="card-body">
                     <div class="car-head">
-                        <h3>${car.name}</h3>
+                        <h4>${car.name}</h4>
                     </div>
                     <div class="car-features">
                         <div class="car-feature">
@@ -35,7 +35,11 @@ fetch('../db.json')
                     </div>
                     <div class="car-details">
                         <div class="car-price">
-                            $${car.price.toLocaleString()}
+                            ${car.price.toLocaleString("en-EG", {
+                                style: "currency",
+                                currency: "EGP",
+                                maximumFractionDigits: 0,
+                            })}
                         </div>
                         <a href="listing_details.html?id=${car.id}" class="view-btn">
                             Details <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -47,7 +51,7 @@ fetch('../db.json')
             resultsContainer.appendChild(card);
 
             setTimeout(() => {
-                card.classList.add('show');
+                card.classList.add("show");
             }, i * 100);
         });
     })
