@@ -66,7 +66,6 @@ filterForm.addEventListener("submit", event => {
     resultsCount.textContent = `showing ${filteredCars.length} results`;
 });
 
-/** @type {HTMLInputElement} */
 const searchbar = document.getElementById("searchbar");
 
 searchbar.addEventListener("input", event => {
