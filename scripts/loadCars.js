@@ -1,3 +1,20 @@
+var resultsContainer = document.getElementById("resultsContainer");
+var resultsCount = document.getElementById("resultCount");
+var cars;
+var filteredCars;
+
+fetchJson("../db.json")
+    .then(result => {
+        cars = result.cars;
+        filteredCars = cars;
+        return result;
+    })
+    .then(result => {
+        cars = cars.sort((a, b) => a.name.localeCompare(b.name));
+        loadCars(resultsContainer, cars);
+        resultsCount.textContent = `showing ${cars.length} results`;
+    });
+
 function createCarCard(car) {
     const card = document.createElement("div");
     card.classList.add("car-card");
@@ -48,20 +65,3 @@ function loadCars(container, carsData) {
         container.appendChild(card);
     }
 }
-
-var resultsContainer = document.getElementById("resultsContainer");
-var resultsCount = document.getElementById("resultCount");
-var cars;
-var filteredCars;
-
-fetchJson("../db.json")
-    .then(result => {
-        cars = result.cars;
-        filteredCars = cars;
-        return result;
-    })
-    .then(result => {
-        cars = cars.sort((a, b) => a.name.localeCompare(b.name));
-        loadCars(resultsContainer, cars);
-        resultsCount.textContent = `showing ${cars.length} results`;
-    });
