@@ -25,9 +25,9 @@ function createCarCard(car) {
             </div>
             <div class="car-details">
                 <div class="car-price">
-                    ${car.price.toLocaleString("en-EG", {
+                    ${car.price.toLocaleString("en-US", {
                         style: "currency",
-                        currency: "EGP",
+                        currency: "USD",
                         maximumFractionDigits: 0,
                     })}
                 </div>
