@@ -19,8 +19,9 @@
     --surface-1: hsl(0, 0%, 98%);
     --surface-2: hsl(220, 20%, 96%);
 
-    /* Colors */
+    /* Brand */
     --primary-color: hsl(230, 87%, 60%);
+    --secondary-color: hsl(262, 70%, 55%);
 
     /* Text */
     --text-light: hsl(0, 0%, 95%);
@@ -30,7 +31,7 @@
 
     /* UI states */
     --success-color: hsl(145, 60%, 42%);
-    --error-color: hsl(0, 80%, 55%);
+    --danger-color: hsl(0, 80%, 55%);
 
     /* Borders / dividers */
     --border-color: hsl(220, 15%, 88%);
@@ -67,16 +68,17 @@
     --surface-1: hsl(222, 18%, 14%);
     --surface-2: hsl(222, 18%, 18%);
 
-    /* Colors (brighter for dark mode) */
+    /* Brand (slightly brighter for dark mode) */
     --primary-color: hsl(230, 90%, 65%);
+    --secondary-color: hsl(262, 80%, 65%);
 
     /* Text */
     --text-color: hsl(0, 0%, 95%);
     --text-muted: hsl(0, 0%, 70%);
 
-    /* UI states (brighter for dark mode) */
+    /* UI states (brightened for visibility on dark bg) */
     --success-color: hsl(145, 65%, 55%);
-    --error-color: hsl(0, 85%, 65%);
+    --danger-color: hsl(0, 85%, 65%);
 
     /* Borders / dividers */
     --border-color: hsl(222, 15%, 28%);
@@ -194,29 +196,14 @@ p {
     --btn-color: var(--secondary-color);
 }
 
-.button.tertiary {
-    --btn-text: var(--text-dark);
-    --btn-color: var(--tertiary-color);
-}
-
-.button.accent {
-    --btn-text: var(--text-dark);
-    --btn-color: var(--accent-color);
-}
-
 .button.success {
     --btn-text: var(--text-dark);
     --btn-color: var(--success-color);
 }
 
-.button.warning {
-    --btn-text: var(--text-dark);
-    --btn-color: var(--warning-color);
-}
-
 .button.danger {
     --btn-text: var(--text-light);
-    --btn-color: var(--error-color);
+    --btn-color: var(--danger-color);
 }
 
 /* containers */
@@ -308,11 +295,11 @@ textarea.form-control {
 }
 
 .form-control.is-error {
-    border-color: var(--error-color);
+    border-color: var(--danger-color);
 }
 
 .form-control.is-error:focus {
-    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--error-color), transparent 75%);
+    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--danger-color), transparent 75%);
 }
 
 /* feedback */
@@ -326,7 +313,7 @@ textarea.form-control {
 }
 
 .form-feedback.error {
-    color: var(--error-color);
+    color: var(--danger-color);
 }
 
 /* Select */
@@ -461,26 +448,31 @@ textarea.form-control {
     border-top: 1px solid var(--border-color);
     font-family: var(--ff1);
 }
+
 .footer-top {
     display: flex;
     justify-content: space-between;
     gap: 50px;
     padding-bottom: 20px;
 }
+
 .footer-brand {
     max-width: 400px;
 }
+
 .footer-brand h3 {
     font-family: "Bebas Neue", "Arial Narrow", Arial, sans-serif;
     color: var(--primary-color);
     font-size: 40px;
     margin-bottom: 20px;
 }
+
 .footer-brand p {
     font-family: var(--ff2);
     color: var(--text-muted);
     font-size: var(--fs6);
 }
+
 .footer-links h4,
 .footer-social h4 {
     font-size: 20px;
@@ -490,24 +482,29 @@ textarea.form-control {
     margin-bottom: 20px;
     color: var(--primary-color);
 }
-.footer-links ul{
+
+.footer-links ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
+
 .footer-links a {
     text-decoration: none;
     color: var(--text-color);
     transition: color 0.15s ease;
 }
+
 .footer-links a:hover {
     color: var(--primary-color);
 }
+
 .social-icons {
     display: flex;
     flex-direction: column;
 }
+
 .social-icons a {
     width: 40px;
     height: 40px;
@@ -516,15 +513,14 @@ textarea.form-control {
     text-decoration: none;
     transition: 0.3s;
 }
+
 .social-icons a:hover {
     color: var(--primary-color);
 }
+
 .footer-bottom {
     padding: 20px;
-    border-top: 1px solid ;
+    border-top: 1px solid;
     text-align: center;
     border-top: 1px solid var(--border-color);
 }
-
-
-
