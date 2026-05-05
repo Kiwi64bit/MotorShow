@@ -510,7 +510,7 @@ textarea.form-control {
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    color: rgb(155, 155, 203);
+    color: var(--primary-color);
 }
 .footer-links ul{
     list-style: none;
