@@ -1,40 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/login_signup.css">
-    
-    
-</head>
-<body>
-    <div class="form-wrapper">    <!--from class="signin-wrapper"  to class="form-wrapper" -->
-        <form action="#" class="form-container" > <!--//form class="signin-form" to class="form-contaiber" -->  
-            <h1>Log in</h1>
-            <p>Welcome back to MotorShow.</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/login_signup.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand">MotorShow</a>
 
-            <div class="form-group">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" name="email" class="form-control" >
-            </div>
-            
-            <div class="form-group">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" id="password" name="password" class="form-control">
-            </div>
-            
-            <div class="form-options">
-                <label class="form-label"><input type="checkbox"> Remember me</label>
-                <a href="#">Forget Password?</a>
-            </div>
+                    <div class="navbar-nav">
+                        <ul class="nav">
+                            <a href="../index.html" class="nav-link">Home</a>
+                            <a href="./listings.html" class="nav-link">Listings</a>
+                            <a href="./blog.html" class="nav-link">Blog</a>
+                            <a href="./about.html" class="nav-link">About</a>
+                            <a href="./contact.html" class="nav-link">Contact</a>
+                        </ul>
+                    </div>
 
-            <button type="submit" class="button primary">Sign in</button>   <!-- //from class="signin-button" to class="submit-button"--> 
+                    <button id="themeToggle" class="theme-toggler"></button>
 
-            <p  >Don't have an account? <a  class="signup-link" href="sign_up.html">Sign Up</a> </p>
-        </form>
-    </div>
-    
-</body>
+                    <button class="login button primary">Login</button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container-sm">
+                <div class="form-container">
+                    <form action="" class="form" id="loginForm">
+                        <!--//form class="signin-form" to class="form-contaiber" -->
+                        <div class="form-header">
+                            <h1>Log in</h1>
+                            <p>Welcome back to MotorShow.</p>
+                        </div>
+
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email</label>
+                                <input
+                                    type="text"
+                                    name="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="e.g. example@gmail.com" />
+                                <span class="form-feedback"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="password">Password</label>
+                                <input type="text" name="password" id="password" class="form-control" />
+                                <span class="form-feedback"></span>
+                            </div>
+
+                            <button type="submit" class="button primary">Sign in</button>
+                        </div>
+
+                        <div class="form-footer">
+                            <p>Don't have an account? <a class="signup-link" href="./sign_up.html">Sign Up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>MotorShow</h3>
+                    <p>Drive your dreams forward — where every journey begins with power, style, and passion.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./listings.html">Listings</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Our Brands</h4>
+                    <ul>
+                        <li>Audi</li>
+                        <li>BMW</li>
+                        <li>Mercedes</li>
+                        <li>Porsche</li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 MotorShow. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="../scripts/validation.js"></script>
+        <script src="../scripts/login.js"></script>
+        <script src="../scripts/toggleTheme.js"></script>
+    </body>
 </html>
