@@ -6,7 +6,7 @@
         <title>Listings</title>
         <link rel="stylesheet" href="../styles/global.css" />
         <link rel="stylesheet" href="../styles/listings.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     </head>
     <body>
         <header>
@@ -26,7 +26,9 @@
 
                     <button id="themeToggle" class="theme-toggler"></button>
 
-                    <button class="login button primary">Login</button>
+                    <div class="nav-auth" id="navAuth">
+                        <a class="button primary" href="./login.html" id="loginLink">Login</a>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -57,7 +59,12 @@
 
                     <div class="search">
                         <label for="search" class="search-label">Search</label>
-                        <input type="text" name="search" id="searchbar" class="form-control searchbar" placeholder="BMW" />
+                        <input
+                            type="text"
+                            name="search"
+                            id="searchbar"
+                            class="form-control searchbar"
+                            placeholder="BMW" />
                     </div>
 
                     <div class="result-count" id="resultCount">showing 0 results</div>
@@ -102,12 +109,9 @@
                     </div>
                 </aside>
 
-
-
                 <div class="results" id="resultsContainer">
                     <!-- Cars will be injected via JavaScript -->
                 </div>
-
             </div>
         </main>
 
@@ -148,7 +152,6 @@
                         <a href="#"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
-
             </div>
             <div class="footer-bottom">
                 <p>© 2025 MotorShow. All rights reserved.</p>
@@ -158,6 +161,7 @@
         <script src="../scripts/fetchJson.js"></script>
         <script src="../scripts/loadCars.js"></script>
         <script src="../scripts/listings.js"></script>
+        <script src="../scripts/navAuth.js"></script>
         <script src="../scripts/toggleTheme.js"></script>
     </body>
 </html>

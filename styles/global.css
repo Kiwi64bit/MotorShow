@@ -398,6 +398,25 @@ textarea.form-control {
     color: var(--primary-color);
 }
 
+.profile-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: var(--ff1);
+    font-size: 0.9rem;
+    text-decoration: none;
+    user-select: none;
+    border: 2px solid var(--primary-color);
+    text-transform: uppercase;
+}
+
 .theme-toggler {
     --bg-light: hsl(230, 25%, 85%);
     --bg-dark: hsl(230, 87%, 75%);
