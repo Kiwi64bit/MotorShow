@@ -16,12 +16,12 @@ main {
     gap: var(--spacing3);
 }
 
-a {
+a.link {
     color: var(--primary-color);
     transition: color 0.15s ease;
 }
 
-a:hover {
+a.link:hover {
     color: var(--secondary-color);
 }
 
