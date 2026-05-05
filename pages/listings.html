@@ -31,28 +31,27 @@
             </nav>
         </header>
 
-        <main class="listings-container">
+        <main class="listings-container sidebar" id="listingsContainer">
             <div class="listings-header">
                 <h1>Listings</h1>
 
                 <div class="info-row">
                     <div class="layout-select">
                         <label for="layout" class="layout-label">Layout</label>
-                        <select class="layout-options select" name="layout" id="layout">
-                            <option value="Default">Full</option>
-                            <option value="Default">Sidebar</option>
+                        <select class="layout-options select" name="layout" id="layoutSelect">
+                            <option value="sidebar" selected>Sidebar</option>
+                            <option value="full">Full</option>
                         </select>
                     </div>
 
                     <div class="sorting">
                         <label for="sortBy" class="sort-label">sort by</label>
                         <select class="sorting-options select" name="sortBy" id="sortBy">
-                            <option value="Default">Rating</option>
-                            <option value="Default">Price (ascending)</option>
-                            <option value="Default">Price (descending)</option>
-                            <option value="Default">Date (oldest first)</option>
-                            <option value="Default">Date (newest first)</option>
-                            <option value="Default">Alphabetical</option>
+                            <option value="alphabetical" selected>Alphabetical</option>
+                            <option value="priceAscending">Price (ascending)</option>
+                            <option value="priceDescending">Price (descending)</option>
+                            <option value="yearOld">Year (oldest first)</option>
+                            <option value="yearNew">Year (newest first)</option>
                         </select>
                     </div>
 

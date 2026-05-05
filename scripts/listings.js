@@ -42,7 +42,6 @@ function parsePrice(str) {
     };
 }
 
-var filteredCars = cars;
 const filterForm = document.getElementById("filterOptions");
 
 filterForm.addEventListener("submit", event => {
@@ -55,8 +54,8 @@ filterForm.addEventListener("submit", event => {
         const price = Number(car.price);
 
         const matchBrand = !filters.brand || brand.toLowerCase() === filters.brand.toLowerCase();
-        const matchModel = !filters.model || model.toLowerCase() === filters.model.toLowerCase;
-        const matchYear = !filters.year || car.year === filters.year;
+        const matchModel = !filters.model || model.toLowerCase() === filters.model.toLowerCase();
+        const matchYear = !filters.year || car.year == filters.year;
         const matchPrice = priceRange.min <= price && price <= priceRange.max;
 
         return matchBrand && matchModel && matchYear && matchPrice;
@@ -80,4 +79,37 @@ searchbar.addEventListener("input", event => {
 
     loadCars(resultsContainer, result);
     resultsCount.textContent = `showing ${result.length} results`;
+});
+
+const sortBy = document.getElementById("sortBy");
+
+const sortConditions = {
+    priceAscending: (a, b) => a.price - b.price,
+    priceDescending: (a, b) => b.price - a.price,
+    yearOld: (a, b) => a.year - b.year,
+    yearNew: (a, b) => b.year - a.year,
+    alphabetical: (a, b) => a.name.localeCompare(b.name),
+};
+
+sortBy.addEventListener("change", event => {
+    const sortName = event.target.value;
+    const condition = sortConditions[sortName];
+
+    const result = filteredCars.sort(condition);
+    loadCars(resultsContainer, result);
+});
+
+const layoutSelect = document.getElementById("layoutSelect");
+const listingsContainer = document.getElementById("listingsContainer");
+
+layoutSelect.addEventListener("change", event => {
+    const layout = event.target.value;
+
+    if (layout === "full") {
+        listingsContainer.classList.remove("sidebar");
+        listingsContainer.classList.add("full");
+    } else {
+        listingsContainer.classList.remove("full");
+        listingsContainer.classList.add("sidebar");
+    }
 });

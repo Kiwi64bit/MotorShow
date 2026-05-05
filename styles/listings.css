@@ -80,6 +80,13 @@
     gap: var(--spacing4);
 }
 
+.listings-container.full .filter-container {
+    display: none;
+}
+
+.listings-container.sidebar .filter-container {
+    display: block;
+}
 
 .car-card {
     flex: 0 0 300px;
