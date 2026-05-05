@@ -19,7 +19,7 @@
     --surface-1: hsl(0, 0%, 98%);
     --surface-2: hsl(220, 20%, 96%);
 
-    /* Brand */
+    /* Colors */
     --primary-color: hsl(230, 87%, 60%);
     --secondary-color: hsl(262, 70%, 55%);
 
@@ -68,7 +68,7 @@
     --surface-1: hsl(222, 18%, 14%);
     --surface-2: hsl(222, 18%, 18%);
 
-    /* Brand (slightly brighter for dark mode) */
+    /* Colors */
     --primary-color: hsl(230, 90%, 65%);
     --secondary-color: hsl(262, 80%, 65%);
 
@@ -76,7 +76,7 @@
     --text-color: hsl(0, 0%, 95%);
     --text-muted: hsl(0, 0%, 70%);
 
-    /* UI states (brightened for visibility on dark bg) */
+    /* UI states */
     --success-color: hsl(145, 65%, 55%);
     --danger-color: hsl(0, 85%, 65%);
 
@@ -189,11 +189,6 @@ p {
 .button.primary {
     --btn-text: var(--text-light);
     --btn-color: var(--primary-color);
-}
-
-.button.secondary {
-    --btn-text: var(--text-light);
-    --btn-color: var(--secondary-color);
 }
 
 .button.success {
