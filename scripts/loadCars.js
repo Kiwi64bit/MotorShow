@@ -3,14 +3,10 @@ var resultsCount = document.getElementById("resultCount");
 var cars;
 var filteredCars;
 
-fetchJson("../db.json")
+fetch("../db.json")
+    .then(response => response.json())
     .then(result => {
-        cars = result;
-        filteredCars = cars;
-        return result;
-    })
-    .then(result => {
-        cars = cars.sort((a, b) => a.name.localeCompare(b.name));
+        cars = result.sort((a, b) => a.name.localeCompare(b.name));
         loadCars(resultsContainer, cars);
         resultsCount.textContent = `showing ${cars.length} results`;
     })
