@@ -68,17 +68,9 @@
     --surface-1: hsl(222, 18%, 14%);
     --surface-2: hsl(222, 18%, 18%);
 
-    /* Colors */
-    --primary-color: hsl(230, 90%, 65%);
-    --secondary-color: hsl(262, 80%, 65%);
-
     /* Text */
     --text-color: hsl(0, 0%, 95%);
     --text-muted: hsl(0, 0%, 70%);
-
-    /* UI states */
-    --success-color: hsl(145, 65%, 55%);
-    --danger-color: hsl(0, 85%, 65%);
 
     /* Borders / dividers */
     --border-color: hsl(222, 15%, 28%);
