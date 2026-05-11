@@ -38,7 +38,9 @@ filterForm.addEventListener("submit", event => {
     const priceRange = parsePrice(filterPrice.value);
 
     filteredCars = cars.filter(car => {
-        const [brand, model] = car.name.split(" ");
+        const brand = car.name.split(" ")[0];
+        const model = car.name.split(" ").slice(1).join(" ");
+
         const price = Number(car.price);
 
         const matchBrand = !filterBrand.value || brand.toLowerCase() === filterBrand.value.toLowerCase();
