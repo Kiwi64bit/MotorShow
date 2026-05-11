@@ -1,6 +1,7 @@
 const TopCarsCards = document.getElementById('TopCarsCards');
 
-fetchJson('db.json')
+fetch('db.json')
+    .then(response => response.json())
     .then(data => {
         const best = data.filter(c => c.best === true);
 
