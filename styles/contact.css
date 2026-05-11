@@ -6,9 +6,8 @@
 .form-item button{
     width: 100%;
 }
-.info{
-   
-    width: fit-content;
+.info{ 
+    
     border-radius: 10px;
     border: 1px solid rgba(118, 113, 113, 0.327);
     height: fit-content;
@@ -29,23 +28,18 @@
 
 iframe{
  width: 90%;   
-height: 490px;
-
+height: 80vh;
 border-radius: 10px;
 }
 
 .loca h5{
-    margin-bottom: 10px;
-    width:fit-content;
     padding:13px ;
     border-radius: 20px;
     border: 1px solid rgba(118, 113, 113, 0.327);
-    height: fit-content;
 }
 
 .loca{
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 30px;
@@ -60,9 +54,13 @@ h5 .fa-solid{
     margin: 30px;
 }
 
-.all{
+.form-info{
     display:flex ;
     justify-content:center;
     gap: 9%;
     margin: 80px;
+}
+a{
+    text-decoration: none;
+    
 }
