@@ -41,9 +41,9 @@ filterForm.addEventListener("submit", event => {
         const [brand, model] = car.name.split(" ");
         const price = Number(car.price);
 
-        const matchBrand = !filterBrand.value || brand.toLowerCase() === filterBrand.toLowerCase();
-        const matchModel = !filterModel || model.toLowerCase() === filterModel.toLowerCase();
-        const matchYear = !filterYear.value || car.year == filterYear;
+        const matchBrand = !filterBrand.value || brand.toLowerCase() === filterBrand.value.toLowerCase();
+        const matchModel = !filterModel.value || model.toLowerCase() === filterModel.value.toLowerCase();
+        const matchYear = !filterYear.value || car.year == filterYear.value;
         const matchPrice = priceRange.min <= price && price <= priceRange.max;
 
         return matchBrand && matchModel && matchYear && matchPrice;
